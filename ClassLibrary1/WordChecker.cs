@@ -16,14 +16,14 @@ namespace ClassLibrary1
             {
                 if (guess[i] == tChars[i])
                 {
-                    result[i] = LetterState.CorectLetter;
+                    result[i] = LetterState.CorrectLetter;
                     used[i] = true;
                 }
             }
 
             for (int i = 0; i < guess.Length; i++)
             {
-                if (result[i] == LetterState.CorectLetter) continue;
+                if (result[i] == LetterState.CorrectLetter) continue;
                 for (int j = 0; j < tChars.Length; j++)
                 {
                     if (!used[j] && guess[i] == tChars[j])

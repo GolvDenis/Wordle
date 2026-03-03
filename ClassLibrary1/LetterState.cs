@@ -4,6 +4,6 @@
     {
         Incorrect,
         WrongPosition, 
-        CorectLetter,
+        CorrectLetter,
     }
 }
