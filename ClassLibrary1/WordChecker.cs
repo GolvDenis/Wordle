@@ -4,7 +4,7 @@ namespace ClassLibrary1
 {
     public class WordChecker
     {
-        public List<LetterState> CheckGuess(string guess, string target)
+        public IReadOnlyList<LetterState> CheckGuess(string guess, string target)
         {
             guess = guess.ToUpperInvariant();
             target = target.ToUpperInvariant();
@@ -35,7 +35,7 @@ namespace ClassLibrary1
                 }
             }
 
-            return result;
+            return result.AsReadOnly();
         }
     }
 }

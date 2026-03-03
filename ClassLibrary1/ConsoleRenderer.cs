@@ -67,7 +67,7 @@ namespace ClassLibrary1
 
         private void SetConsoleColors(LetterState s)
         {
-            if (s == LetterState.CorectLetter)
+            if (s == LetterState.CorrectLetter)
             {
                 Console.BackgroundColor = ConsoleColor.DarkGreen;
                 Console.ForegroundColor = ConsoleColor.White;
