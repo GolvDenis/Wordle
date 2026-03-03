@@ -11,7 +11,8 @@ internal class Program
             var wordProvider = new Word("Words.txt");
             var checker = new WordChecker();
             var board = new Board(maxAttempts: 6, wordLength: 5);
-            var game = new Game(wordProvider, checker, board);
+            var renderer = new ConsoleRenderer();
+            var game = new Game(wordProvider, checker, board, renderer);
             game.Run();
         }
         catch (Exception ex)
