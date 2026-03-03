@@ -6,7 +6,7 @@ using System.Text;
 
 public class Word
 {
-    public HashSet<string> AllWords { get; private set; } = new();
+    public IReadOnlyList<string> AllWords { get; private set; }
     public string TargetWord { get; private set; }
 
     private Random random = new();
@@ -27,7 +27,7 @@ public class Word
                                       .Trim()
                                       .ToUpperInvariant());
 
-        AllWords = new HashSet<string>(lines);
+        AllWords = new List<string>(lines).AsReadOnly();
     }
 
     public string GenerateTargetWord()
